@@ -1,0 +1,27 @@
+.container {
+    width: 960px;
+    height: 650px;
+    background-image: url("../images/wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#backdrop {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+button {
+    margin: 0 auto;
+    display: block;
+}
+
+ul {
+    list-style-type: circle;
+}
