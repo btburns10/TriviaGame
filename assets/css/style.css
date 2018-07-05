@@ -1,3 +1,7 @@
+body {
+    font-family: 'Wendy One', sans-serif;
+}
+
 .container {
     width: 960px;
     height: 650px;
@@ -7,21 +11,48 @@
     color: black;
 }
 
-#backdrop {
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
 h1 {
-    font-size: 48px;
+    font-size: 54px;
     color: white;
     margin-bottom: 40px;
 }
 
+#backdrop {
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.gif-image {
+    width: 400px;
+    height: 300px;
+}
+
+#scoreBox {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    height: 100px;
+    margin-left: 40px;
+}
+
 button {
-    margin: 0 auto;
+    margin-left: 40px;
     display: block;
+    padding: 12px 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+
+}
+
+button:hover {
+    border: 1px solid red;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.23);
+    cursor: pointer;
 }
 
 ul {
     list-style-type: circle;
+}
+
+li:hover {
+    cursor: pointer;
 }

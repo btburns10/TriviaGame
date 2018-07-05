@@ -15,7 +15,7 @@ var triviaGame = {
 
 var count = 0;
 var correct = 0;
-var incorrect = 0;
+var wrong = 0;
 var timer = 30;
 var timeOut;
 var optionsDisplay = $("#optionsDisplay");
@@ -24,6 +24,9 @@ var optionsDiv = $("#optionsDiv");
 var timerSpan = $("#timer");
 var startBtn = $("#start");
 var response = $("#response");
+var correctCount = $("#correctCount");
+var wrongCount = $("#wrongCount");
+var totalScore = $("#totalScore");
 
 function resetGame() {
         count = 0;
@@ -38,7 +41,7 @@ function resetGame() {
 
 function displayGif() {
     var gifImg = $("<img>");
-    gifImg.attr("src", triviaGame.questionBank[count].gif);
+    gifImg.attr("src", triviaGame.questionBank[count].gif).addClass("gif-image");
     $("#optionsDiv").append(gifImg);
     var correctAswer = $("<p>");
     correctAswer.text("The correct answer is " + triviaGame.questionBank[count].answer);
@@ -60,18 +63,25 @@ function timeUp() {
     timeOut = setTimeout(function() {
         displayGif();
         count++;
-        incorrect++;
-        response.text("Sorry you have run out of time");
+        wrong++;
+        response.text("Sorry you have run out of time").css("color", "black");
+        wrongCount.text(wrong);
         $("ul").empty();
         clearInterval(intervalId);
-        nextQuestion();
+        setTimeout(function() {nextQuestion();}, 4000);
     }, 30000);
 }
 
 //initialize game
 startBtn.on("click", function() {
     $(this).css("display", "none");
-    nextQuestion();   
+    nextQuestion();  
+    $("#backdrop").css("background-color", "rgba(255, 255, 255, 0.5)");
+    correct = 0;
+    wrong = 0;
+    correctCount.text(correct);
+    wrongCount.text(wrong); 
+    totalScore.empty();
 });
 
 function nextQuestion() {
@@ -89,18 +99,20 @@ function nextQuestion() {
     timerCountDown();
     clearTimeout(timeOut);
     timeUp();
-    setTimeout(function() {response.empty();}, 2500);
+    response.empty();
 }
 
 //capture player guess and evaluate
 function clickEvent() {
     if($(this).text() === triviaGame.questionBank[count].answer) {
         correct++;
-        response.text("Correct!");
+        response.text("Correct!").css("color", "green");
+        correctCount.text(correct);
     }
     else {
-        incorrect++;
-        response.text("Wrong!");
+        wrong++;
+        response.text("Wrong!").css("color", "red");
+        wrongCount.text(wrong);
     }
     //display gif
     displayGif();
@@ -109,7 +121,8 @@ function clickEvent() {
     $("ul").empty();  
     clearInterval(intervalId);
     //check if last question
-    if(count === 10) {
+    if(count === triviaGame.questionBank.length) {
+        totalScore.text(((correct/triviaGame.questionBank.length) * 100) + "%");
         resetGame();
     }
     else {      

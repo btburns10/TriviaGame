@@ -9,40 +9,56 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet">
 </head>
 
 <body>
 
 <div class="container">
-
-        <h1>Trivia</h1>
-
-    <div id="backdrop" class="col-lg-8">
-
-        <div><strong>Question: </strong><span id="question"></span></div>
-
-        <hr>
-        <div>Time Remaining: <span id="timer"></span></div>
-        <div id="optionsDiv"><strong>Answer Choices: </strong>
-            
-            <ul id="optionsDisplay"></ul> 
-
-            <div class="responseDiv">
-                <span id="response"></span>
-            </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Trivia</h1>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div id="backdrop" class="col-lg-7">
 
+            <div><strong>Question: </strong><span id="question"></span></div>
+
+            <hr>
+            <div>Time Remaining: <span id="timer"></span></div>
+            <div id="optionsDiv"><strong>Answer Choices: </strong>
+
+                <ul id="optionsDisplay"></ul> 
+
+                <div class="responseDiv">
+                    <span id="response"></span>
+                </div>
+            </div>
+
+        </div>
+            <div id="scoreBox" class="col-lg-1">
+                <div class="row">
+                    <p>Correct: <span id="correctCount"></span></p>
+                </div>
+                <div class="row">
+                    <p>Wrong: <span id="wrongCount"></span></p>
+                </div>
+                <div class="row">
+                    <span id="totalScore"></span>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <button id="start">Start</button>
+        </div>
     </div>
 
-    <button id="start">Start</button>
-
 </div>
-
-
-
-
-
-
 
 
 
