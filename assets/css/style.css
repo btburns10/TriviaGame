@@ -34,6 +34,10 @@ h1 {
     margin-left: 40px;
 }
 
+#totalScore {
+    margin-left: left;
+}
+
 button {
     margin-left: 40px;
     display: block;

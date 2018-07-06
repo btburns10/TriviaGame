@@ -31,6 +31,7 @@ var totalScore = $("#totalScore");
 function resetGame() {
         count = 0;
         timer = 30;
+        clearTimeout(timeOut);
         clearInterval(intervalId);
         timerSpan.text(timer);
         $("ul").empty(); 
