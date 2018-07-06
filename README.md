@@ -6,7 +6,7 @@ Sports trivia was designed to challenge sports enthusiasts in a fun, humurous qu
 
 Instructions:
 
-Click the 'Start' button to begin playing. There are a total of 10 questions.  You will have 30 seconds to answer each question.  Don't hesitate to answer a question or it will count negatively against your running total score!  You will be scored out of a total of 100%.  If you are unhappy with your score or are just an avid sports fanatic, hit the 'Start' button to play again!  Good luck and hope you enjoy my game.
+Click the 'Start' button to begin playing. There are a total of 10 questions.  You will have 30 seconds to answer each question.  Don't hesitate to answer a question or it will count negatively against your running total score.  You will be scored out of a total of 100%.  If you are unhappy with your score or are just an avid sports fanatic, hit the 'Start' button to play again!  Good luck and hope you enjoy my game. Click this link to play the game! [Sports Trivia Game](https://btburns10.github.io/TriviaGame/)
 
 Developers:
 Brendan Burns - Raleigh/Durham
